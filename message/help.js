@@ -136,6 +136,7 @@ exports.gabutMenu = (prefix, ownerName) => {
 ├≽ *${prefix}cantik*
 ├≽ *${prefix}ganteng*
 ├≽ *${prefix}jadian*
+├≽ *${prefix}gay*
 ├─────────────────────
 ╘═══ 《 *By ${ownerName}* 》 ═══`
 }
@@ -204,7 +205,6 @@ exports.animeMenu = (prefix, ownerName) => {
 ├≽ *${prefix}shinobu*
 ├≽ *${prefix}nekonime*
 ├≽ *${prefix}megumin*
-├≽ *${prefix}husbu*
 ├─────────────────────
 ╘═══ 《 *By ${ownerName}* 》 ═══`
 }
