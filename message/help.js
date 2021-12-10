@@ -5,6 +5,9 @@ exports.menu = (prefix, i) => {
 
 exports.newMenu = (ucapan, ownerName, botName, prefix, pendaftar, runtime, pushname, isOwner, isPremium, sisalimit, limitCount, glimit, gcount, expired, tanggal, jam) => {
     return `${ucapan.data.result} ${pushname}
+     
+       ```HARUTO BoTZ only``
+
 ╒═══ 《 *${botName}* 》 ═══
 ├────────────────────
 ├≽ *Creator : ${ownerName}*
