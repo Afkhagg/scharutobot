@@ -950,7 +950,17 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
 					let gejs = `Cewek️ paling cantik di group ini adalah\n*@${cintax.jid.split('@')[0]}*`
 					mentions(gejs, [aku.jid, cintax.jid], true)
 					break
-					case prefix+'jadian':
+			        case prefix+'gay':
+					if (!isGroup)return reply(mess.OnlyGrup)
+					var kamu = groupMembers
+					var cinta = groupMembers
+					var aku = cinta[Math.floor(Math.random() * kamu.length)]
+					var cintax = kamu[Math.floor(Math.random() * cinta.length)]
+					let yejs = `yang gay di group ini adalah\n*@${cintax.jid.split('@')[0]}*`
+					mentions(yejs, [aku.jid, cintax.jid], true)
+					break
+
+                                        case prefix+'jadian':
 					if (!isGroup)return reply(mess.OnlyGrup)
 					var kamu = groupMembers
 					var cinta = groupMembers
@@ -959,15 +969,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
 					let vejs = `Ciee.. yang lagi jadian\n*@${aku.jid.split('@')[0]}* ♥️ @${cintax.jid.split('@')[0]}\nSemoga Langgeng Hii`
 					mentions(vejs, [aku.jid, cintax.jid], true)
 					break
-				case prefix+'gay':
-					if (!isGroup)return reply(mess.OnlyGrup)
-					var kamu = groupMembers
-					var cinta = groupMembers
-					var aku = cinta[Math.floor(Math.random() * kamu.length)]
-					var cintax = kamu[Math.floor(Math.random() * cinta.length)]
-					let gejs = `yang gay di group ini adalah\n*@${cintax.jid.split('@')[0]}*`
-					mentions(gejs, [aku.jid, cintax.jid], true)
-					break
+				
 					case prefix+'kapankah':
 					if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} aku jadi wibu`)
 					const kapan = ['Besok', 'Lusa', 'Tadi', '4 Hari Lagi', '5 Hari Lagi', '6 Hari Lagi', '1 Minggu Lagi', '2 Minggu Lagi', '3 Minggu Lagi', '1 Bulan Lagi', '2 Bulan Lagi', '3 Bulan Lagi', '4 Bulan Lagi', '5 Bulan Lagi', '6 Bulan Lagi', '1 Tahun Lagi', '2 Tahun Lagi', '3 Tahun Lagi', '4 Tahun Lagi', '5 Tahun Lagi', '6 Tahun Lagi', '1 Abad lagi', '3 Hari Lagi']
