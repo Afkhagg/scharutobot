@@ -522,7 +522,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
             }
                 break
             case prefix+'stickerwm': case prefix+'swm': case prefix+'take': case prefix+'takesticker': case prefix+'takestick':{
-                if (!isPremium) return reply(mess.OnlyPrem)
+                if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
                 if (args.length < 2) return reply(`Penggunaan ${command} nama|author`)
                 let packname1 = q.split('|')[0] ? q.split('|')[0] : q
                 let author1 = q.split('|')[1] ? q.split('|')[1] : ''
@@ -959,16 +959,14 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
 					let vejs = `Ciee.. yang lagi jadian\n*@${aku.jid.split('@')[0]}* ♥️ @${cintax.jid.split('@')[0]}\nSemoga Langgeng Hii`
 					mentions(vejs, [aku.jid, cintax.jid], true)
 					break
-				case prefix+'seberapagay':
-                if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} Rara`)
-				axios.get(`https://arugaz.herokuapp.com/api/howgay`).then(res => res.data).then(res =>
-				textImg(`Nih Liat Data Gay Si ${q}\n\nPersentase Gay : ${res.persen}%\nAlert!!! : ${res.desc}`))
-				break
-				case prefix+'bisakah':
-				if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} aku jadi ganteng`)
-					const bisa = ['Tentu Saja Bisa! Kamu Adalah Orang Paling Homky', 'Gak Bisa Ajg Aowkwowk', 'Hmm Gua Gak Tau Yaa, tanya ama bapakau', 'Ulangi Tod Gua Ga Paham']
-					const keh = bisa[Math.floor(Math.random() * bisa.length)]
-					xinz.sendMessage(from, 'Pertanyaan : bisakah ' + q + '\n\nJawaban : ' + keh, text, { quoted: msg })
+				case prefix+'gay':
+					if (!isGroup)return reply(mess.OnlyGrup)
+					var kamu = groupMembers
+					var cinta = groupMembers
+					var aku = cinta[Math.floor(Math.random() * kamu.length)]
+					var cintax = kamu[Math.floor(Math.random() * cinta.length)]
+					let gejs = `yang gay di group ini adalah\n*@${cintax.jid.split('@')[0]}*`
+					mentions(gejs, [aku.jid, cintax.jid], true)
 					break
 					case prefix+'kapankah':
 					if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} aku jadi wibu`)
@@ -1097,7 +1095,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                 xinz.sendContact(from, q.split("|")[0], q.split("|")[1], msg)
                 break
             case prefix+'hidetag':{
-                if (!isPremium) return reply(`Kamu bukan user premium, kirim perintah *${prefix}daftarprem* untuk membeli premium`)
+                if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
                 if (args.length < 2) return reply(`Masukkan text`)
                 let arr = [];
                 for (let i of groupMembers){
