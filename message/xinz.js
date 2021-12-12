@@ -1026,9 +1026,9 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
 					textImg(randQuote)
 				}
 				break
-				case prefix+'darkjokes': case prefix+'darkjoke': case prefix+'jokes': case prefix+'dark':{
+				case prefix+'meme': case prefix+'darkjoke': case prefix+'jokes': case prefix+'dark':{
 					if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-					axios.get(`https://api-ramlan.herokuapp.com/api/random/darkjoke?apikey=${apikey}`)
+					axios.get(`https://i.redd.it/41hbdy16ox481.jpg`)
 					.then(({data}) => {
 					sendFileFromUrl(from, data.urlimage, '', msg)
 					limitAdd(sender, limit)
