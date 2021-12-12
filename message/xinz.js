@@ -1037,9 +1037,10 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
 				break
 				case prefix+'pantun':{
 					if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-					axios.get(`https://api-ramlan.herokuapp.com/api/random/pantun?apikey=${apikey}`)
+					axios.get('https://recoders-area.caliph.repl.co/api/darkjokes?apikey=${APIKeys["https://recoders-area.caliph.repl.co`)
 					.then(({data}) => {
-					textImg(data.pantun)
+					sendFileFromUrl(from, data.urlimage, '', msg)
+					limitAdd(sender, limit)
 					})
 				}
 				break
