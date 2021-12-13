@@ -37,7 +37,9 @@ exports.newMenu = (ucapan, ownerName, botName, prefix, pendaftar, runtime, pushn
 ├≽ *${prefix}downloadmenu*
 ├≽ *${prefix}searchmenu*
 ├≽ *${prefix}animemenu*
+├≽ *${prefix}makermenu*
 ├≽ *${prefix}toolsmenu*
+├≽ *${prefix}randommenu*
 ├≽ *${prefix}storagemenu*
 ├≽ *${prefix}othermenu*
 ├────────────────────
@@ -148,6 +150,8 @@ exports.gameMenu = (prefix, ownerName) => {
 ├≽ *${prefix}tictactoe*
 ├≽ *${prefix}delttt*
 ├≽ *${prefix}suit*
+├≽ *${prefix}tebakgambar*
+├≽ *${prefix}topglobal*
 ├─────────────────────
 ╘═══ 《 *By ${ownerName}* 》 ═══`
 }
@@ -186,14 +190,8 @@ exports.stalkMenu = (prefix, ownerName) => {
 exports.randomMenu = (prefix, ownerName) => {
     return `╒═══ 《 *RANDOM MENU* 》 ═══
 ├────────────────────
-├≽ *${prefix}quotes*
-├≽ *${prefix}darkjokes
-├≽ *${prefix}pantun
-├≽ *${prefix}bucin
-├≽ *${prefix}cehor
-├≽ *${prefix}fakta
-├≽ *${prefix}katabijak
-├≽ *${prefix}motivasi
+├≽ *${prefix}meme*
+├≽ *${prefix}darkjokes*
 ├─────────────────────
 ╘═══ 《 *By ${ownerName}* 》 ═══`
 }
@@ -214,7 +212,9 @@ exports.toolsMenu = (prefix, ownerName) => {
     return `╒═══ 《 *TOOLS MENU* 》 ═══
 ├────────────────────
 ├≽ *${prefix}nuliskanan*
+├≽ *${prefix}nuliskiri*
 ├≽ *${prefix}foliokanan*
+├≽ *${prefix}foliokiri*
 ├≽ *${prefix}ebase64*
 ├≽ *${prefix}debase64*
 ├≽ *${prefix}ehex*
@@ -260,22 +260,6 @@ exports.makerMenu = (prefix, ownerName) => {
 ├≽ *${prefix}lionlogo*
 ├≽ *${prefix}wolflogo*
 ├≽ *${prefix}ninjalogo*
-├≽ *${prefix}pubglogo*
-├≽ *${prefix}shadowtext*
-├≽ *${prefix}smoketext*
-├≽ *${prefix}romancetext*
-├≽ *${prefix}carvedwood*
-├≽ *${prefix}harrypotter*
-├≽ *${prefix}flamingtext*
-├≽ *${prefix}falleaves*
-├≽ *${prefix}underwater*
-├≽ *${prefix}wolfmetal*
-├≽ *${prefix}woodboard*
-├≽ *${prefix}undergrass*
-├≽ *${prefix}coffetext*
-├≽ *${prefix}lovetext*
-├≽ *${prefix}burnpaper*
-├≽ *${prefix}lovemessage*
 ├─────────────────────
 ╘═══ 《 *By ${ownerName}* 》 ═══`
 }
