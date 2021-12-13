@@ -1685,7 +1685,7 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
             case prefix+'loli':{
                 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
                 reply(mess.wait)
-                axios.get(`https://waifu.pics/api/sfw/shinobu`)
+                axios.get(`https://waifu.pics/api/sfw/waifu`)
 						.then(({data}) => {
 						sendFileFromUrl(from, data.url, 'Nih kak', msg)
 						})
