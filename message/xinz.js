@@ -1033,7 +1033,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
 					sendFileFromUrl(from, data.urlimage, '', msg)
 					limitAdd(sender, limit)
 					})
-				
+				}
 				break
 				case prefix+'bucin':{
 					if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
