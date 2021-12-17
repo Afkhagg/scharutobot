@@ -873,7 +873,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
                 if (args.length < 2) return reply(`Penggunaan ${command} text\n\nContoh : ${command} xinz`)
                 reply(mess.wait)
-                xinz.sendImage(from, await getBuffer(`${configs.apiUrl}/api/${command}?text=${data.body}&apikey=${configs.zeksKey}`), '', msg).catch(() => reply(mess.error.api))
+                xinz.sendImage(from, await getBuffer(`https://api-ramlan.herokuapp.com/api/textpro2/${command.slice(1)}?apikey=${apikey}&text1=${q.split("|")[0]}&text2=${q.split("|")[1]}`), '', msg).catch(() => reply(mess.error.api))
                 limitAdd(sender, limit)
                 }
                     break
@@ -895,7 +895,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                 if (args.length < 2) return reply(`Penggunaan ${command} text1|text2\n\nContoh : ${command} Ramlan|Rara`)
                 if (!q.includes("|")) return reply(`Penggunaan ${command} text1|text2\n\nContoh : ${command} Ramlan|Rara`)
                 reply(mess.wait)
-                xinz.sendImage(from, await getBuffer(`${configs.apiUrl}/api/${command}?apikey=${configs.zeksKey}&text1=${text[0]}&text2=${text[1]}`), '', msg).catch(() => reply(mess.error.api))
+                xinz.sendImage(from, await getBuffer(`https://api-ramlan.herokuapp.com/api/textpro2/${command.slice(1)}?apikey=${Harutokey}&text1=${q.split("|")[0]}&text2=${q.split("|")[1]}`), '', msg).catch(() => reply(mess.error.api))
                 limitAdd(sender, limit)
                 }
                     break
@@ -1659,7 +1659,7 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
 			case prefix+'sagiri':{
                 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
                 reply(mess.wait)
-						sendFileFromUrl(from, `https://api-ramlan.herokuapp.com/api/sagiri?apikey=${apikey}`, 'Neh', msg)
+						sendFileFromUrl(from, `https://api-ramlan.herokuapp.com/api/sagiri?apikey=${Harutokey}`, 'Neh', msg)
 						limitAdd(sender, limit)
 						}
                       break
